@@ -1,0 +1,86 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/d3.v2.min.js" type="application/javascript"></script>
+    <script src="./src/timeknots.js" type="application/javascript"></script>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+      body {
+        font: 18px "Helvetica Neue";
+        font-weight: 300;
+        text-rendering: optimizeLegibility;
+        margin-left: 20px;
+      }
+
+      svg {
+        position: absolute;
+        bottom: 0;
+      }
+      img{
+        width: 30%;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="noteDate" style="width:100%;"></div>
+
+    <script type="text/javascript">
+
+      const filmsNote = [
+        {
+          name: "Day of the Fight",
+          date: "1951-04-26",
+          img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00302403-bwjbkbfzju-portrait.jpg"
+        },
+        {
+          name: "The Seafarers",
+          date: "1953-10-15",
+          img: "https://media.npr.org/assets/img/2022/07/25/moviestill2_custom-717caa5dc12a74098925c048754fa2e19aff431e-s1100-c50.jpg"
+        },
+        {
+          name: "Lolita (1962 film)",
+          date: "1962-06-13",
+          img: "https://i.ytimg.com/vi/-2n6esRBs2k/movieposter.jpg"
+        },
+        {
+          name: "Fear and Desire",
+          date: "1953-03-31",
+          img: "https://lumiere-a.akamaihd.net/v1/images/p_shangchiandthelegendofthetenringshomeentupdate_22055_7b62fa67.jpeg?region=0%2C0%2C540%2C800"
+        },
+        {
+          name: "Paths of Glory",
+          date: "1957-12-25",
+          img: "https://occ-0-299-778.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbCMgPSfyhgc0hX4kjd65iXrI2AzcgwKDl-oqNyxADVEURd_fg9uzx8yakk9RLrFUPgWRh6MPl49BeaeJBZMp9hYPb1i20-_DEgI3NvfnyYJ9zPJhI2Z18cXHUglZ-C8Jcxh.jpg?r=185"
+        },
+        {
+          name: "A Clockwork Orange (film)",
+          date: "1965-12-19",
+          img: "http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Clockwork_orangeA.jpg/220px-Clockwork_orangeA.jpg"
+        },
+        {
+          name: "Killer's Kiss",
+          date: "1955-09-28",
+          img: "http://upload.wikimedia.org/wikipedia/en/thumb/a/a6/KillersKissPoster.jpg/220px-KillersKissPoster.jpg"
+        }
+      ];
+
+      TimeKnots.draw("#noteDate", filmsNote, {
+        dateFormat: "%B %Y",
+        color: "#696",
+        width: 500,
+        showLabels: true,
+        labelFormat: "%Y",
+      });
+
+
+    </script>
+
+  </body>
+
+</html>
